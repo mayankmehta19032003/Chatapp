@@ -41,6 +41,9 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
+.profile label img:hover{
+   border: 2px solid #077eff;
+}
 .profile input, textarea{
     padding: 10px;
     min-width: 300px;
@@ -49,6 +52,7 @@
 }
 .profile form button{
     border: none;
+    border-radius: 5px;
     color: white;
     background-color: #077eff;
     padding: 8px;

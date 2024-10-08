@@ -14,8 +14,8 @@ const ProfileUpdate = () => {
             <img src={image ? URL.createObjectURL(image) :assets.avatar_icon} alt="" />
             upload profile image
           </label>
-          <input type="text" placeholder='your name' required />
-          <textarea placeholder='Write profile bio' required></textarea>
+          <input type="text" placeholder='Your name' required />
+          <textarea placeholder='Write profile bio...' required></textarea>
           <button type='submit'>Save</button>
         </form>
         <img className='profile-pic' src={image ? URL.createObjectURL(image) :assets.logo_icon} alt="" />
