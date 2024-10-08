@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import {getFirestore, setDoc,doc} from "firebase/firestore";
 import { toast } from "react-toastify";
 
@@ -38,10 +38,20 @@ const signup = async(username,email,password)=> {
             chatData: []
         })
     } catch (error) {
-        console.log(error);
-        toast.error(error.code);
+        // console.log(error);
+        toast.error(error.code.split("/")[1].split("-").join(" "));
     }
 }
-export {signup}
+
 
 //create login feature
+const login = async (email,password)=>{
+    try {
+        await signInWithEmailAndPassword(auth,email,password);
+    } catch (error) {
+        // console.log(error);
+        toast.error(error.code.split("/")[1].split("-").join(" "));
+    }
+}
+
+export {signup,login}
