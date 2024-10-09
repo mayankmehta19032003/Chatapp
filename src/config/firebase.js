@@ -31,7 +31,6 @@ const signup = async(username,email,password)=> {
             name:"",
             avatar:"",
             bio:"Hey, There i am using Chapapp",
-            lastSeen: Date.now()
 
         })
         await setDoc(doc(db,"chats",user.uid),{
