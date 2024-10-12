@@ -37,7 +37,7 @@ const AppContextProvider = ({ children }) => {
                 const chatItems =res.data().chatsData; 
                 const tempData = [];
                 for(const item of chatItems){
-                    const userRef = doc(db,"user",item.rId);
+                    const userRef = doc(db,"users",item.rId);
                     const userSnap = await getDoc(userRef);
                     const userData = userSnap.data();
                     tempData.push({...item,userData})
