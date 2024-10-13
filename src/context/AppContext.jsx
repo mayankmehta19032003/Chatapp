@@ -9,6 +9,9 @@ const AppContextProvider = ({ children }) => {
     const navigate = useNavigate(); 
     const [userData, setUserData] = useState(null);
     const [chatData, setChatData] = useState(null);
+    const [messagesId,setMessagesId] = useState(null);
+    const [messages,setMessages] = useState([]);
+    const [chatUser,setChatUser] = useState(null);
 
     const loadUserData = async (uid) => {
         try {
@@ -56,6 +59,10 @@ const AppContextProvider = ({ children }) => {
         chatData,
         setChatData,
         loadUserData,
+        messages,setMessages,
+        messagesId,setMessagesId,
+        chatUser,setChatUser
+
     };
 
     return (
